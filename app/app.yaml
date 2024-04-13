@@ -1,15 +1,5 @@
 runtime: python311
 
-env: flex  # Use the flexible environment
-
-service: your-service-name  # Replace with your app's name
-
-instance_class: F1  # Adjust instance class based on your needs
-
-api_version: auto
-
-entrypoint: gunicorn -b :$PORT main:app
-
 handlers:
 - url: /.*
   script: main.py
